@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">hearthstone</string>
+    <string name="page_title">Hearthstone</string>
+    <string name="classes_filter">Classes</string>
+    <string name="types_filter">Types</string>
+    <string name="races_filter">Races</string>
+</resources>
