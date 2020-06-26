@@ -1,15 +1,14 @@
 package com.daviabrantes.hearthstone.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.daviabrantes.hearthstone.R
-import com.daviabrantes.hearthstone.model.Card
+import com.daviabrantes.hearthstone.entities.CardResponseModel
 
 class CardListGridRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var cardList = listOf<Card>()
+    private var cardList = listOf<CardResponseModel>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return CardListViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_grid_card, parent, false))
@@ -22,7 +21,7 @@ class CardListGridRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder
         cardViewHolder.bindView(cardList[position])
     }
 
-    fun setCardList(listOfCards: List<Card>) {
+    fun setCardList(listOfCards: List<CardResponseModel>) {
         cardList = listOfCards
         notifyDataSetChanged()
     }

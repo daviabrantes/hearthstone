@@ -16,5 +16,4 @@ class CardResponseModel {
     var img : String = ""
     var imgGold : String = ""
     var locale : String = ""
-
 }

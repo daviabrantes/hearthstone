@@ -1,35 +1,18 @@
 package com.daviabrantes.hearthstone.service
 
 import com.daviabrantes.hearthstone.entities.CardResponseModel
+import io.reactivex.Observable
+import io.reactivex.internal.operators.observable.ObservableError
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.Path
 
 interface GetService {
 
-    @GET("/cards/classes/Druid")
-    fun getDruids(): Call<List<CardResponseModel>>
+    @Headers("x-rapidapi-host: omgvamp-hearthstone-v1.p.rapidapi.com", "x-rapidapi-key: 7bc1bc89d2mshecbb9cd881f6e3fp126269jsn7320795a8b0f")
+    @GET("cards/{param1}/{param2}")
+    fun getCards(@Path("param1") param1 : String, @Path("param2") param2 : String): Observable<List<CardResponseModel>>
 
-    @GET("/cards/classes/Hunter")
-    fun getHunters(): Call<List<CardResponseModel>>
 
-    @GET("/cards/classes/Mage")
-    fun getMages(): Call<List<CardResponseModel>>
-
-    @GET("/cards/types/Spell")
-    fun getSpells(): Call<List<CardResponseModel>>
-
-    @GET("/cards/types/Weapon")
-    fun getWeapons(): Call<List<CardResponseModel>>
-
-    @GET("/cards/types/Hero")
-    fun getHeroes(): Call<List<CardResponseModel>>
-
-    @GET("/cards/qualities/Common")
-    fun getCommon(): Call<List<CardResponseModel>>
-
-    @GET("/cards/qualities/Epic")
-    fun getEpics(): Call<List<CardResponseModel>>
-
-    @GET("/cards/qualities/Legendary")
-    fun getLegendary(): Call<List<CardResponseModel>>
 }

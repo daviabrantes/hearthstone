@@ -1,4 +1,4 @@
-package com.daviabrantes.hearthstone.activity.main
+package com.daviabrantes.hearthstone.ui.main
 
 import android.graphics.Color
 import android.graphics.drawable.PaintDrawable
