@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsActivity"></activity>
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:parentActivityName=".activity.main.MainActivity"></activity>
+        <activity android:name=".activity.results.ResultsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,5 +21,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
