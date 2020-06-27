@@ -1,4 +1,4 @@
-package com.daviabrantes.hearthstone.entities
+package com.daviabrantes.hearthstone.model
 
 import com.google.gson.annotations.SerializedName
 

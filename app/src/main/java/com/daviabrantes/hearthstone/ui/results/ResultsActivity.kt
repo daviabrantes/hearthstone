@@ -8,8 +8,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.daviabrantes.hearthstone.R
 import com.daviabrantes.hearthstone.ui.main.MainActivity
-import com.daviabrantes.hearthstone.adapter.CardListGridRecyclerAdapter
-import com.daviabrantes.hearthstone.entities.CardResponseModel
+import com.daviabrantes.hearthstone.ui.results.adapter.CardListGridRecyclerAdapter
+import com.daviabrantes.hearthstone.model.CardResponseModel
 import kotlinx.android.synthetic.main.activity_results.*
 import org.koin.android.ext.android.inject
 
@@ -24,13 +24,11 @@ class ResultsActivity : AppCompatActivity(), ResultsViewContract {
         presenter.setView(this)
         initView()
 
-        presenter.getCards("classes", "Druid")
+        presenter.getCards(intent.getStringExtra("getParameters"))
 
         button_back.setOnClickListener {
-            View.OnClickListener {
                 val intent = Intent(this, (MainActivity::class.java))
                 startActivity(intent)
-            }
         }
     }
 

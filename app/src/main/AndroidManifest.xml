@@ -12,9 +12,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.daviabrantes.hearthstone.ui.main.MainActivity"
+            android:name="com.daviabrantes.hearthstone.ui.results.ResultsActivity"
             android:parentActivityName="com.daviabrantes.hearthstone.ui.main.MainActivity"></activity>
-        <activity android:name=".ui.results.ResultsActivity">
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

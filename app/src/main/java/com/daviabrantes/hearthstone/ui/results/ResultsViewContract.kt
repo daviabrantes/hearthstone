@@ -1,6 +1,6 @@
 package com.daviabrantes.hearthstone.ui.results
 
-import com.daviabrantes.hearthstone.entities.CardResponseModel
+import com.daviabrantes.hearthstone.model.CardResponseModel
 
 interface ResultsViewContract {
 

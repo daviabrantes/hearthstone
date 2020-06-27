@@ -1,10 +1,10 @@
-package com.daviabrantes.hearthstone.adapter
+package com.daviabrantes.hearthstone.ui.results.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.daviabrantes.hearthstone.R
-import com.daviabrantes.hearthstone.entities.CardResponseModel
+import com.daviabrantes.hearthstone.model.CardResponseModel
 
 class CardListGridRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

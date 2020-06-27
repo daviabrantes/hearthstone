@@ -9,8 +9,8 @@ class ResultsPresenter(val getService: GetService) : ResultsPresenterContract{
 
     private lateinit var activity: ResultsViewContract
 
-    override fun getCards(param1: String, param2: String) {
-       getService.getCards(param1, param2).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({result -> activity.getCardsSuccess(result)}, {result -> activity.getCardsError()}, {})
+    override fun getCards(getParameters: String) {
+       getService.getCards(getParameters).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({result -> activity.getCardsSuccess(result)}, {result -> activity.getCardsError()}, {})
     }
 
     override fun setView(activity : ResultsViewContract) {
