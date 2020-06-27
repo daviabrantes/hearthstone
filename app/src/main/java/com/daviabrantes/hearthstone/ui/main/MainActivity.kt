@@ -25,39 +25,39 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupObservers() {
         button_druid.setOnClickListener {
-            startResultsActivity("classes/Druid")
+            startResultsActivity("classes/Druid", "Druid")
         }
 
         button_hunter.setOnClickListener {
-            startResultsActivity("classes/Hunter")
+            startResultsActivity("classes/Hunter", "Hunter")
         }
 
         button_mage.setOnClickListener {
-            startResultsActivity("classes/Mage")
+            startResultsActivity("classes/Mage", "Mage")
         }
 
         button_weapon.setOnClickListener {
-            startResultsActivity("types/Weapon")
+            startResultsActivity("types/Weapon", "Weapon")
         }
 
         button_spell.setOnClickListener {
-            startResultsActivity("types/Spell")
+            startResultsActivity("types/Spell", "Spell")
         }
 
         button_hero.setOnClickListener {
-            startResultsActivity("types/Hero")
+            startResultsActivity("types/Hero", "Hero")
         }
 
         button_common.setOnClickListener {
-            startResultsActivity("qualities/Common")
+            startResultsActivity("qualities/Common", "Common")
         }
 
         button_epic.setOnClickListener {
-            startResultsActivity("qualities/Epic")
+            startResultsActivity("qualities/Epic","Epic")
         }
 
         button_legendary.setOnClickListener {
-            startResultsActivity("qualities/Legendary")
+            startResultsActivity("qualities/Legendary", "Legendary")
         }
     }
 
@@ -80,8 +80,10 @@ class MainActivity : AppCompatActivity() {
         button_spell.background = (setButtonProperties())
     }
 
-    fun startResultsActivity(getParameters : String) {
-        val intent = Intent(this, (ResultsActivity::class.java)).putExtra("getParameters", getParameters)
+    fun startResultsActivity(getParameters : String, filterName : String) {
+        val intent = Intent(this, (ResultsActivity::class.java))
+            .putExtra("getParameters", getParameters)
+            .putExtra("filterName", filterName)
         startActivity(intent)
     }
 

@@ -1,5 +1,6 @@
 package com.daviabrantes.hearthstone.model
 
+import androidx.annotation.Nullable
 import com.google.gson.annotations.SerializedName
 
 class CardResponseModel {
@@ -13,7 +14,7 @@ class CardResponseModel {
     var text : String = ""
     var artist : String = ""
     var playerClass : String = ""
-    var img : String = ""
+    var img : String? = ""
     var imgGold : String = ""
     var locale : String = ""
 }

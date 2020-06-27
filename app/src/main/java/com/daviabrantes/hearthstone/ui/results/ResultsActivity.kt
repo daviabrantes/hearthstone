@@ -21,6 +21,7 @@ class ResultsActivity : AppCompatActivity(), ResultsViewContract {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
+        supportActionBar?.hide()
         presenter.setView(this)
         initView()
 
@@ -35,6 +36,7 @@ class ResultsActivity : AppCompatActivity(), ResultsViewContract {
     private fun initView() {
         recycler_view.layoutManager = GridLayoutManager(this, 2)
         recycler_view.adapter = cardListAdapter
+        text_filter.text = intent.getStringExtra("filterName")
     }
 
     override fun getCardsSuccess(cardList: List<CardResponseModel>) {
