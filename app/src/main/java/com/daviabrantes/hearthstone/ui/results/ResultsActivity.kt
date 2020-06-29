@@ -44,7 +44,7 @@ class ResultsActivity : AppCompatActivity(), ResultsViewContract {
     }
 
     override fun getCardsError() {
-        Toast.makeText(this, "Deu ruim", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Ocorreu um erro ao realizar operação.", Toast.LENGTH_LONG).show()
     }
 }
 

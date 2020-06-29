@@ -1,13 +1,10 @@
 package com.daviabrantes.hearthstone.ui.results.adapter
 
-import android.content.Context
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.daviabrantes.hearthstone.R
 import com.daviabrantes.hearthstone.model.CardResponseModel
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_grid_card.view.*
 
 
@@ -15,7 +12,6 @@ class CardListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bindView(cardModel: CardResponseModel) {
 
         var image = cardModel.img?.replace("http", "https")
-        Log.d("descubra", image)
         Glide.with(itemView)  //2
             .load(image) //3
             .centerCrop() //4

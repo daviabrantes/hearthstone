@@ -1,8 +1,5 @@
 package com.daviabrantes.hearthstone.model
 
-import androidx.annotation.Nullable
-import com.google.gson.annotations.SerializedName
-
 class CardResponseModel {
 
     var cardId : String = ""
